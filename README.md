@@ -9,6 +9,6 @@ Windows:
 
 Generic:
 --------
-1.  Run `git submodule init` in the root of the clone
+1.  Run `git submodule init; git submodule update` in the root of the clone
 
 
