@@ -27,7 +27,11 @@ if $COLORTERM == 'gnome-terminal'
         colorscheme railscasts
 endif
 
-set guifont=Sauce_Code_Powerline:h9:cANSI
+if has("win32")
+    set guifont=Sauce_Code_Powerline:h9:cANSI
+else
+    set guifont=Source\ Code\ Pro\ 10
+endif
 
 
 set expandtab
@@ -36,4 +40,11 @@ set tabstop=4
 set softtabstop=4
 
 let g:airline_powerline_fonts = 1
+let g:session_autosave = 'no'
 let mapleader = ","
+
+au BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
+au BufNewFile,BufRead *.cl set filetype=opencl
+
+set number
+
