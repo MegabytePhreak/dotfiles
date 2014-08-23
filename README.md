@@ -9,5 +9,6 @@ Windows:
 
 Generic:
 --------
-1.  Run ./vim/update_bundles.sh (Does not currently exist, will read through all bundles in .vim/bundles and list the repo ./vim/bundles.list
+1.  Run `git submodule init` in the root of the clone
+
 
