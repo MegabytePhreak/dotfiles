@@ -1,0 +1,37 @@
+
+
+snippet /*** "Comment Block" b
+/*************************************************************************
+ * $1
+ ************************************************************************/
+$2
+endsnippet
+
+snippet aff "Flip-Flop" b
+always_ff @(posedege ${1:iCLK})
+begin 
+	$2
+end
+endsnippet
+
+
+snippet affr "Flip-Flop with reset" b
+always_ff @(posedge ${1:iCLK})
+begin
+	if(${2:iRST})
+	begin
+		$3
+	end
+	else
+	begin
+		$4
+	end
+end
+endsnippet
+
+snippet begin "Verilog block"
+begin
+	$1
+end
+endsnippet
+
